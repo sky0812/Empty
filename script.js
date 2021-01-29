@@ -1,1 +1,1 @@
-some script
+alert('a new commit');
