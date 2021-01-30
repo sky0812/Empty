@@ -1,3 +1,5 @@
+'use strict';
+
 // создаю переменную num
 let num = 266219;
 
@@ -12,13 +14,11 @@ let numArr = numSplit.map(Number);
 
 // перемножаю числовые значения в массиве
 let multi = numArr.reduce(function(times, current) {
-    'use strict';
-    console.log('Результат перемножения значений:');
     return times * current;
 });
 
 // вывожу результат в консоль
-console.log(multi);
+console.log('Результат перемножения значений: \n', multi);
 
 // возвожу результат в степень
 let extent = multi ** 3;
