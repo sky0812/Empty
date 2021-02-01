@@ -9,7 +9,13 @@ console.log(typeof addExpenses);
 
 // булевое значение для deposit
 let deposit = confirm('Есть ли у вас депозит в банке?');
-console.log(typeof deposit);
+if (Boolean(deposit)) {
+    console.log(typeof deposit);
+} else {
+    deposit = confirm('Есть ли у вас депозит в банке?');
+}
+
+
 
 // период
 let period = 5;
