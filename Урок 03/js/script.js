@@ -25,9 +25,9 @@ let amount1 = +prompt('Во сколько это обойдется?');
 let expenses2 = prompt('Введите обязательную статью расходов?');
 let amount2 = +prompt('Во сколько это обойдется?');
 
-console.log(expenses1, expenses2);
-let myArr = [expenses1, expenses2];
-console.log(myArr);
+// console.log(expenses1, expenses2);
+// let myArr = [expenses1, expenses2];
+// console.log(myArr);
 
 // получаю бюджета на месяц
 let budgetMonth = money - (amount1 + amount2);
