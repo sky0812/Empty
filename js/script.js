@@ -1,26 +1,44 @@
 'use strict';
 
-// область видимости
-let y = 5;
 
-function one(x) {
-    console.log(x + y);
+function numberCheck() {
+    
+    // получаю рандомное значение от 1 до 100
+    let randInt = Math.floor(Math.random() * 100) + 1;
+    console.log('Случайное число: ', randInt);
+
+        function myFunc() {
+            // получаю число от пользователя
+            let userNumber = prompt('Угадай число от 1 до 100');
+            console.log('введенное пользователем число: ', userNumber);
+
+        
+            if (userNumber == randInt) {
+                alert('Поздравляю, Вы угадали!!!');
+                return;
+            }
+            
+            if (userNumber === null) {
+                alert('Игра окончена');
+                return;
+            }
+
+            if (!parseFloat(userNumber)) {
+                alert('Введи число!');
+                return myFunc();
+            } 
+        
+            if (userNumber < randInt) {
+                alert('Загаданное число больше');
+                return myFunc();
+            }
+        
+            if (userNumber > randInt) {
+                alert('Загаданное число меньше');
+                return myFunc();
+            }
+            
+        }
+    myFunc(randInt);
 }
-
-function two() {
-    let y = 10;
-    one(3);
-}
-two();
-
-
-// замыкание
-function funcMath(a) {
-    return function (b) {
-        console.log(a * b);
-    };
-}
-
-const mathPow = funcMath(10);
-mathPow(5);
-console.dir(mathPow);
+numberCheck();
