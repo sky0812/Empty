@@ -22,6 +22,8 @@ let appData = {
     expenses: {},
     addExpenses: [],
     deposit: false,
+    percentDeposut: 0,
+    moneyDeposit: 0,
     mission: 50000,
     period: 3,
     budget: money,
@@ -29,17 +31,34 @@ let appData = {
     budgetMonth: 0,
     expensesMonth: 0,
     asking: function () {
+
+        if (confirm('Есть ли у Вас дополнительный источник заработка?')) {
+            let itemIncome;
+            do {
+                itemIncome = prompt('Какой у Вас есть дополнительный заработок?', 'Таксую');
+            }
+            while (isNumber(itemIncome));
+            let cashIncome;
+            do {
+                cashIncome = prompt('Сколько в месяц Вы на этом зарабатываете?', 10000);
+            }
+            while (!isNumber(cashIncome));
+            appData.income[itemIncome] = cashIncome;
+        }
         // объявление переменных
-        let addExpenses = prompt(`Перечислите 
-            возможные расходы за рассчитываемый период через запятую`, 'kino');
-            appData.addExpenses = addExpenses.toLowerCase().split(',');
+        let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'kino');
+            appData.addExpenses = addExpenses.toLowerCase().split (',');
             appData.deposit = confirm('Есть ли у вас депозит в банке?');
 
         let i;
         let sum = 0;   
         let newObj = new Object ();
         for (i = 0; i <2; i++) { 
-        let expName = prompt('Введите обязательную статью расходов?');
+            let expName;
+            do {
+                expName = prompt('Введите обязательную статью расходов?');
+            }
+            while (isNumber(expName));       
             do {
                 sum = +prompt('Во сколько Вам это обойдется?', 5000);
             }
@@ -68,27 +87,45 @@ let appData = {
             appData.period = Math.ceil(appData.mission / appData.budgetMonth);
         }
     },
-    getStatusIncome: function () {
-        if (appData.budgetDay >= 1200) {
-            appData.income = 'У вас высокий уровень дохода';
-        } else if (appData.budgetDay >= 600) {
-            appData.income = 'У вас средний уровень дохода';
-        } else if (appData.budgetDay >= 0) {
-            appData.income = 'К сожалению у вас уровень дохода ниже среднего';
-        } else if (appData.budgetDay < 0) {
-            appData.income = 'Что то пошло не так';
+    // getStatusIncome: function () {
+    //     if (appData.budgetDay >= 1200) {
+    //         appData.income = 'У вас высокий уровень дохода';
+    //     } else if (appData.budgetDay >= 600) {
+    //         appData.income = 'У вас средний уровень дохода';
+    //     } else if (appData.budgetDay >= 0) {
+    //         appData.income = 'К сожалению у вас уровень дохода ниже среднего';
+    //     } else if (appData.budgetDay < 0) {
+    //         appData.income = 'Что то пошло не так';
+    //     }
+    // }
+    getInfoDeposit: function() {
+        if (appData.deposit) {
+            do {
+                appData.percentDeposit = prompt('Какой годовой процент?', 10);
+            }
+            while (!isNumber(appData.percentDeposit));
+            do {
+                appData.moneyDeposit = prompt('Какая сумма заложена?', 10000);
+            }
+            while (!isNumber(appData.moneyDeposit));            
         }
+    },
+    calcSavedMoney: function () {
+        return appData.budgetMonth * appData.period;
     }
 };
 appData.asking();
 appData.getExpensesMonth();
 appData.getBudget();
 appData.getTargetMonth();
-appData.getStatusIncome();
+appData.calcSavedMoney();
+appData.getInfoDeposit();
+
+// appData.getStatusIncome();
 console.log(appData);
 console.log('Расходы за месяц: ', appData.expensesMonth);
 console.log('Цель будет достигнута за (месяцев):', appData.period);
-console.log('Уровень дохода', appData.income);
+// console.log('Уровень дохода', appData.income);
 
 
 
@@ -99,3 +136,7 @@ function newNewHi() {
     }
 };
 newNewHi();
+
+//Вывод возможных расходов в строку
+let expChanger = appData.addExpenses.map(x=>x[0].toUpperCase()+x.slice(1)).join(', ');
+console.log('Вывод возможных расходов в строку', expChanger);
