@@ -172,7 +172,7 @@ console.log('Каждый элемент в правой части програ
 let budgetMoth = document.querySelector('.budget_day-value');
 console.log('Оставшиеся поля через querySelector каждый в отдельную переменную:', budgetMoth);
 
-// поля ввода (input) с левой стороны и не забудьте про range.
+// поля ввода (input) с левой стороны и не забудьте про range
 let salaryAmount = document.querySelector('.salary-amount');
 console.log('Salary Amount', salaryAmount);
 
