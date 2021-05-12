@@ -1,5 +1,83 @@
 "use strict";
 
+
+// Урок 9
+// Кнопку "Рассчитать" через id
+
+let calcBtn = document.getElementById('start');
+console.log('Кнопка Рассчитать:', calcBtn);
+
+// Кнопки “+” (плюс) через Tag, каждую в своей переменной. 
+let btnIncome = document.querySelector('.income');
+let plusBtnIncome = btnIncome.getElementsByTagName('button');
+console.log('Кнопки Плюс Income', plusBtnIncome);
+
+let btnExp = document.querySelector('.expenses');
+let plusBtnExp = btnExp.getElementsByTagName('button');
+console.log('Кнопки Плюс Expenses', plusBtnExp);
+
+// Чекбокс по id через querySelector
+let checkDeposit = document.querySelector('#deposit-check');
+console.log('Чекбокс', checkDeposit);
+
+// Поля для ввода возможных доходов (additional_income-item) при помощи querySelectorAll
+let possibleIncome = document.querySelectorAll('.additional_income-item');
+console.log('Поля для ввода возможных доходов', possibleIncome);
+
+// Каждый элемент в правой части программы через класс(не через querySelector), которые имеют в имени класса "-value", начиная с class="budget_day-value" и заканчивая class="target_month-value">
+
+const budgetDayValue = document.getElementsByClassName('result-total')[1];
+console.log('Каждый элемент в правой части программы c -value', budgetDayValue);
+
+
+const expMonthValue = document.getElementsByClassName('result-total')[2];
+console.log('Каждый элемент в правой части программы c -value', expMonthValue);
+
+
+const addIncomeValue = document.getElementsByClassName('result-total')[3];
+console.log('Каждый элемент в правой части программы c -value', addIncomeValue);
+
+
+const addExpValue = document.getElementsByClassName('result-total')[4];
+console.log('Каждый элемент в правой части программы c -value', addExpValue);
+
+
+const incomePeriodValue = document.getElementsByClassName('result-total')[5];
+console.log('Каждый элемент в правой части программы c -value', incomePeriodValue);
+
+
+const targetMonthValue = document.getElementsByClassName('result-total')[6];
+console.log('Каждый элемент в правой части программы c -value', targetMonthValue);
+
+// Оставшиеся поля через querySelector каждый в отдельную переменную:
+let budgetMoth = document.querySelector('.budget_day-value');
+console.log('Оставшиеся поля через querySelector каждый в отдельную переменную:', budgetMoth);
+
+// поля ввода (input) с левой стороны и не забудьте про range
+let salaryAmount = document.querySelector('.salary-amount');
+console.log('Salary Amount', salaryAmount);
+
+let incomeTitle = document.querySelector('.income-title');
+console.log('Income title', incomeTitle);
+
+let incomeAmount = document.querySelector('.income-amount');
+console.log('income amount', incomeAmount);
+
+let trueExpTitle = document.querySelector('.expenses-title');
+console.log('expenses title', trueExpTitle);
+
+let trueExpAmount = document.querySelector('.expenses-amount');
+console.log('expenses amount', trueExpAmount);
+
+let addExpItem = document.querySelector('.additional_expenses-item');
+console.log('additional_expenses-item', addExpItem);
+
+let targetAmount = document.querySelector('.target-amount');
+console.log('target-amount', targetAmount);
+
+let periodSelect = document.querySelector('.period-select');
+console.log('period-select', periodSelect.value);
+
 // функция проверки на правильное значение
 let isNumber = function (n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
@@ -141,58 +219,3 @@ newNewHi();
 let expChanger = appData.addExpenses.map(x=>x[0].toUpperCase()+x.slice(1)).join(', ');
 console.log('Вывод возможных расходов в строку', expChanger);
 
-
-
-
-// Урок 9
-// Кнопку "Рассчитать" через id
-
-let calcBtn = document.getElementById('start');
-console.log('Кнопка Рассчитать:', calcBtn);
-
-// Кнопки “+” (плюс) через Tag, каждую в своей переменной. 
-let plusBtn = document.querySelectorAll('.btn_plus');
-console.log('Кнопки Плюс', plusBtn);
-
-// Чекбокс по id через querySelector
-let checkDeposit = document.querySelector('#deposit-check');
-console.log('Чекбокс', checkDeposit);
-
-// Поля для ввода возможных доходов (additional_income-item) при помощи querySelectorAll
-let possibleIncome = document.querySelectorAll('.additional_income-item');
-console.log('Поля для ввода возможных доходов', possibleIncome);
-
-// Каждый элемент в правой части программы через класс(не через querySelector), которые имеют в имени класса "-value", начиная с class="budget_day-value" и заканчивая class="target_month-value">
-
-let allInputs = document.querySelectorAll('.result-total');
-let allInputsArray = Array.prototype.slice.call(allInputs, 1);
-console.log('Каждый элемент в правой части программы c -value', allInputsArray);
-
-// Оставшиеся поля через querySelector каждый в отдельную переменную:
-let budgetMoth = document.querySelector('.budget_day-value');
-console.log('Оставшиеся поля через querySelector каждый в отдельную переменную:', budgetMoth);
-
-// поля ввода (input) с левой стороны и не забудьте про range
-let salaryAmount = document.querySelector('.salary-amount');
-console.log('Salary Amount', salaryAmount);
-
-let incomeTitle = document.querySelector('.income-title');
-console.log('Income title', incomeTitle);
-
-let incomeAmount = document.querySelector('.income-amount');
-console.log('income amount', incomeAmount);
-
-let trueExpTitle = document.querySelector('.expenses-title');
-console.log('expenses title', trueExpTitle);
-
-let trueExpAmount = document.querySelector('.expenses-amount');
-console.log('expenses amount', trueExpAmount);
-
-let addExpItem = document.querySelector('.additional_expenses-item');
-console.log('additional_expenses-item', addExpItem);
-
-let targetAmount = document.querySelector('.target-amount');
-console.log('target-amount', targetAmount);
-
-let periodSelect = document.querySelector('.period-select');
-console.log('period-select', periodSelect.value);
