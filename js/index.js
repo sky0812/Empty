@@ -77,22 +77,23 @@ let appData = {
         this.getAddExpenses();
         this.getAddIncome();
         this.getBudget();
-        this.getTargetMonth();
-        this.calcPeriod();
         this.getInfoDeposit();
+        this.getStatusIncome();
+        // this.getTargetMonth();
+        // this.calcPeriod();
 
         this.showResult();
 
     },
     showResult: function() {
-        budgetMonthValue.value = +this.budgetMonth;
-        budgetDayValue.value = +this.budgetDay;
-        expensesMonthValue.value = +this.expensesMonth;
+        budgetMonthValue.value = this.budgetMonth;
+        budgetDayValue.value = this.budgetDay;
+        expensesMonthValue.value = this.expensesMonth;
         additionalExpensesValue.value = this.addExpenses.join(', ');
         additionalIncomeValue.value = this.addIncome.join(', ');
-        targetMonthValue.value = this.getTargetMonth();
+        targetMonthValue.value = Math.ceil(this.getTargetMonth());
         incomePeriodValue.value = this.calcPeriod();
-        periodSelect.addEventListener('input', function(){
+        periodSelect.addEventListener('change', function(){
             incomePeriodValue.value = appData.calcPeriod();
         });
         
@@ -134,6 +135,9 @@ let appData = {
                 appData.income[itemIncome] = cashIncome;
             }
         });
+        for (let key in this.income) {
+            this.incomeMonth += +this.income[key];
+        }
     },
     getAddExpenses: function() {
         let addExpenses = additionalExpensesItem.value.split(',');
@@ -154,7 +158,7 @@ let appData = {
     },
     getExpensesMonth: function () {
         for (const key in this.expenses) {
-            this.expensesMonth += this.expenses[key];
+            this.expensesMonth += +this.expenses[key];
           }
     },
     getBudget: function () {
@@ -164,7 +168,18 @@ let appData = {
         this.budgetDay = Math.floor(this.budgetMonth / 30);
     },
     getTargetMonth: function () {
-        return Math.ceil(targetAmount.value / this.budgetMonth);
+        return targetAmount.value / this.budgetMonth;
+    },
+    getStatusIncome: function() {
+        if (this.budgetDay >= 800) {
+            return ('Высокий уровень дохода');
+        } else if (this.budgetDay >= 300 && this.budgetDay < 800) {
+            return ('Средний уровень дохода');
+        } else if (this.budgetDay >= 0 && this.budgetDay < 300) {
+            return ('Низкий уровень дохода');
+        } else if (this.budgetDay < 0) {
+            return ('Что-то пошло не так');
+        }
     },
     getInfoDeposit: function() {
         if (this.deposit) {
