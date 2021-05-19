@@ -250,6 +250,16 @@ AppData.prototype.reset = function () {
     incomePlus.removeAttribute('disabled');
     expensesPlus.removeAttribute('disabled');
 
+
+    start.setAttribute('disabled', 'true');
+    salaryAmount.addEventListener('input', function(event){
+        if (salaryAmount.value !== '') {
+            start.removeAttribute('disabled');
+        } else {
+            start.setAttribute('disabled', 'true');
+        }
+    });
+
 };
 
 AppData.prototype.eventListeners = function () {
