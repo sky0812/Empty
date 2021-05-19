@@ -82,9 +82,10 @@ AppData.prototype.start = function () {
     this.getBudget();
     this.getInfoDeposit();
     this.getStatusIncome();
+    // this.getTargetMonth();
+    // this.calcPeriod();
 
     this.showResult();
-    this.eventListeners();
 };
 
 
@@ -253,15 +254,24 @@ AppData.prototype.reset = function () {
 
 AppData.prototype.eventListeners = function () {
 
-    start.addEventListener('click', appData.start.bind(appData));
-    expensesPlus.addEventListener('click', appData.addExpensesBlock);
-    incomePlus.addEventListener('click', appData.addIncomeBlock);
-    cancel.addEventListener('click', appData.reset.bind(appData));
-    
+    start.addEventListener('click', this.start.bind(this));
+    expensesPlus.addEventListener('click', this.addExpensesBlock);
+    incomePlus.addEventListener('click', this.addIncomeBlock);
+    cancel.addEventListener('click', this.reset.bind(this));
+
     periodSelect.addEventListener('input', function(event){
         PeriodAmount.textContent = periodSelect.value;
     });
-    
+
+
+    start.setAttribute('disabled', 'true');
+    salaryAmount.addEventListener('input', function(event){
+        if (salaryAmount.value !== '') {
+            start.removeAttribute('disabled');
+        } else {
+            start.setAttribute('disabled', 'true');
+        }
+    });
 };
 
 
@@ -271,20 +281,10 @@ AppData.prototype.eventListeners = function () {
 
 
 const appData = new AppData();
+appData.eventListeners();
 
 
-start.setAttribute('disabled', 'true');
-salaryAmount.addEventListener('input', function(event){
-    if (salaryAmount.value !== '') {
-        start.removeAttribute('disabled');
-    } else {
-        start.setAttribute('disabled', 'true');
-    }
-});
-
-
-
-// //Вывод возможных расходов в строку
-let expChanger = appData.addExpenses.map(x=>x[0].toUpperCase()+x.slice(1)).join(', ');
+//Вывод возможных расходов в строку
+// let expChanger = appData.addExpenses.map(x=>x[0].toUpperCase()+x.slice(1)).join(', ');
 
 
