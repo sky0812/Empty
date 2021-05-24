@@ -1,0 +1,198 @@
+/*
+Theme Name:   twentyseventeenchild
+Description:  Write here a brief description about your child-theme
+Author:       admin_soft
+Author URL:   https://soft.nova-green.ru
+Template:     twentyseventeen
+Version:      1.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  twentyseventeenchild
+*/
+
+/* Write here your own personal stylesheet */
+
+.site-title {
+    text-transform: unset!important;
+    font-weight: 400!important;
+}
+
+.navigation-top {
+    background: #3e445287;
+}
+
+.navigation-top a {
+    color: #fff;
+}
+
+.main-navigation a {
+	transition:all 0.5s ease;
+}
+
+.main-navigation a:hover {
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+
+.navigation-top .wrap {
+    padding: 0.75em 0;
+}
+
+p.woocommerce-result-count {
+    display: none;
+}
+
+form.woocommerce-ordering {
+    display: none;
+}
+
+.home_title {
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+.home li.product img {
+    border-radius: 10px;
+}
+
+.home li.product {
+	  position: absolute;
+	  text-decoration: none;
+	  border-radius: 10px;
+	  background-image: linear-gradient(transparent 50%, #3e44521c 50%);
+	  background-size: 200% 200%;
+	  background-repeat: no-repeat;
+	  transition: all 1s ease;
+      padding: 5px!important;
+}
+
+.home li.product:hover {
+  	background-position: 0 100%;
+}
+
+h2.woocommerce-loop-product__title {
+    padding-top: 10px;
+}
+
+table.wccpf_fields_table.unique-wrapper {
+    margin-bottom: 0;
+}
+
+td.wccpf_label {
+    display: none;
+}
+
+ul.wccpf-field-layout-horizontal {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+label.wcff-option-wrapper-label {
+    font-weight: 500;
+}
+
+ins {
+    background: transparent;
+    font-size: 20px;
+}
+
+ul.page-numbers {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #1d1f2b;
+}
+
+label {
+    font-weight: 500;
+}
+
+.onsale {
+    top: 15px;
+	border-radius:5px;
+	border:1px solid #000;
+}
+
+.single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
+    max-width: unset;
+}
+
+.site-content {
+    padding: 0 0 0;
+}
+
+.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media, .has-header-video:not(.twentyseventeen-front-page):not(.home) .custom-header-media {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 300px;
+}
+
+.custom-header {
+    height: 300px;
+}
+
+.menu-toggle {
+    background: #fff!important;
+}
+
+.page-template-default .site-branding, .product-template-default .site-branding {
+    height: 100%;
+}
+
+.page-template-default .site-branding-text, .product-template-default .site-branding-text {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.home.page-template-default .site-branding-text {
+    height: unset;
+}
+
+form.woocommerce-cart-form {
+    margin-top: 50px;
+}
+
+.page-template-default p.site-title, .product-template-default p.site-title {
+    margin-bottom: 0;
+    margin-top: calc(100% - 100px);
+}
+
+.single-product form.cart input {
+    padding: 15px;
+}
+
+nav.woocommerce-breadcrumb {
+    margin-top: 20px;
+}
+
+.flex-viewport {
+    margin-bottom: 10px;
+}
+
+.product-template-default .custom-header, .page-template-default .custom-header  {
+    margin-bottom: 0!important;
+}
+
+@media only screen and (max-width: 787px) {
+	.navigation-top a {
+		color: #000;
+		font-weight: 500;
+	}
+	li#wpmenucartli {
+		display: block;
+		float: unset!important;
+	}
+	.product-template-default .custom-header, .page-template-default .custom-header {
+		height: 222px;
+    	z-index: 0;
+	}
+}
