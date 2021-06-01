@@ -1,0 +1,65 @@
+2020-04-25T10:06:18+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/tmp-home-page.php на строке 4
+
+2020-04-25T10:24:55+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php:543
+Stack trace:
+#0 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(518): Uni_Cpo_Product::is_post_editable()
+#1 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(135): Uni_Cpo_Product::is_builder_active()
+#2 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(287): Uni_Cpo_Product::display_options('')
+#3 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/simple в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php на строке 543
+
+2020-04-25T10:25:25+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php:543
+Stack trace:
+#0 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(518): Uni_Cpo_Product::is_post_editable()
+#1 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(135): Uni_Cpo_Product::is_builder_active()
+#2 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(287): Uni_Cpo_Product::display_options('')
+#3 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/simple в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php на строке 543
+
+2020-04-25T10:28:03+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php:543
+Stack trace:
+#0 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(518): Uni_Cpo_Product::is_post_editable()
+#1 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(135): Uni_Cpo_Product::is_builder_active()
+#2 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(287): Uni_Cpo_Product::display_options('')
+#3 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/simple в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php на строке 543
+
+2020-04-25T10:28:41+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php:543
+Stack trace:
+#0 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(518): Uni_Cpo_Product::is_post_editable()
+#1 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(135): Uni_Cpo_Product::is_builder_active()
+#2 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(287): Uni_Cpo_Product::display_options('')
+#3 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/simple в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php на строке 543
+
+2020-04-25T10:28:52+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on bool in /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php:543
+Stack trace:
+#0 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(518): Uni_Cpo_Product::is_post_editable()
+#1 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php(135): Uni_Cpo_Product::is_builder_active()
+#2 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(287): Uni_Cpo_Product::display_options('')
+#3 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /home/bh65303/bitcoin.griniuk-development.ru/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#5 /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/simple в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/plugins/uni-woo-custom-product-options/includes/class-uni-cpo-product.php на строке 543
+
+2020-04-25T14:12:10+00:00 CRITICAL syntax error, unexpected 'step_decimal' (T_STRING) в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 470
+
+2020-04-25T14:12:24+00:00 CRITICAL syntax error, unexpected 'step_decimal' (T_STRING) в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 470
+
+2020-04-25T14:12:37+00:00 CRITICAL syntax error, unexpected 'step_decimal' (T_STRING) в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 470
+
+2020-04-25T14:13:54+00:00 CRITICAL syntax error, unexpected 'step_decimal' (T_STRING) в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 470
+
+2020-04-25T14:14:11+00:00 CRITICAL syntax error, unexpected 'step_decimal' (T_STRING) в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 478
+
+2020-04-25T14:14:34+00:00 CRITICAL syntax error, unexpected 'step_decimal' (T_STRING) в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 478
+
+2020-04-25T14:14:40+00:00 CRITICAL syntax error, unexpected 'step_decimal' (T_STRING) в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 478
+
+2020-04-25T16:34:37+00:00 CRITICAL syntax error, unexpected ',' в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 495
+
+2020-04-25T16:41:23+00:00 CRITICAL syntax error, unexpected ';' в /home/bh65303/bitcoin.griniuk-development.ru/wp-content/themes/sirat/functions.php на строке 503
+
