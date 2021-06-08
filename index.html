@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Хлебомолы</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d7ae19f0-1b66-4efc-9cce-a66fe0c6e070" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/dependencyLibs/inputmask.dependencyLib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header_top d-flex justify-content-lg-between flex-column flex-lg-row flex-wrap justify-content-center align-items-center">
+                        <ul class="header_top_list d-flex mb-2 mb-lg-0 flex-wrap justify-content-center justify-content-lg-unset">
+                            <li class="header_top_item"><a href="#"> О магазине</a></li>
+                            <li class="header_top_item"><a href="#"> Доставка и самовывоз</a></li>
+                            <li class="header_top_item"><a href="#"> Оплата</a></li>
+                            <li class="header_top_item"><a href="#"> Контакты</a></li>
+                            <li class="header_top_item"><a href="#"> Блог</a></li>
+                        </ul>
+                        <div class="header_top_wrap d-flex">
+                            <div class="header_top_wrap_city d-flex">
+                                <img src="img/icon.png" alt="" class="header_top_wrap_img">
+                                <p class="header_top_wrap_text">Город: </p>
+                                    <a href="" class="header_top_wrap_link">Москва</a>
+                                </p>
+                            </div>
+                            <div class="header_top_wrap_acc d-flex">
+                                <img src="img/user.png" alt="" class="header_top_wrap_img">
+                                <a href="" class="header_top_wrap_link">Личный кабинет</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_mid d-flex align-items-center flex-column flex-lg-row justify-content-center justify-content-lg-unset">
+                    <div class="col-12 col-lg-4 mb-2 mb-lg-0">
+                        <div class="logo d-flex justify-content-center justify-content-lg-unset">
+                            <img src="img/logo.png" alt="" class="logo_img">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 text-center text-lg-unset mb-2 mb-lg-0">
+                        <label for="" class="search_label">
+                            <input type="text" class="search" placeholder="Найти что-нибудь">
+                        </label>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="phone_wrap d-flex flex-column align-items-center  align-items-lg-end">
+                            <p class="phone_warp_text">+7 800 555-33-86</p>
+                            <a href="" class="phone_wrap_link header_top_wrap_link">Обратный звонок</a>
+                        </div>
+                    </div>            
+                </div>
+                <div class="col-12">
+                    <div class="header_bot d-flex align-items-center justify-content-lg-between flex-wrap justify-content-center">
+                        <ul class="main_menu d-flex flex-wrap justify-content-center justify-content-lg-unset">
+                            <li class="main_menu_item mb-2 mb-lg-0"><a href="#"> Мельницы</a></li>
+                            <li class="main_menu_item mb-2 mb-lg-0"><a href="#"> Техника</a></li>
+                            <li class="main_menu_item mb-2 mb-lg-0"><a href="#"> Для выпечки</a></li>
+                            <li class="main_menu_item mb-2 mb-lg-0"><a href="#"> Посуда</a></li>
+                            <li class="main_menu_item mb-2 mb-lg-0"><a href="#"> Проращиватели</a></li>
+                            <li class="main_menu_item mb-2 mb-lg-0"><a href="#"> Детям</a></li>
+                            <li class="main_menu_item mb-2 mb-lg-0"><a href="#"> Чай из Непала</a></li>
+                        </ul>
+                        <div class="cart d-flex align-items-center">
+                            <img src="img/cart2.png" alt="" class="cart_img">
+                            <p class="cart_text">19 054 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content_title text-center text-lg-start">
+                        Оформление заказа
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-lg-between flex-column flex-lg-row justify-content-center align-items-center align-items-lg-start">
+                    <div class="content_wrap_left order-lg-1 order-2">
+                        <div class="face_wrap d-flex flex-column flex-md-row justify-content-center justify-content-md-unset">
+                            <div class="form_radio_btn">
+                                <input id="radio-1" type="radio" name="radio" value="1" checked="true">
+                                <label for="radio-1">Физическое лицо</label>
+                            </div>
+                             
+                            <div class="form_radio_btn">
+                                <input id="radio-2" type="radio" name="radio" value="2">
+                                <label for="radio-2">Юридическое лицо</label>
+                            </div>
+                        </div>
+                        <div class="contact_data">
+                            <div class="content_subtitle">Контактные данные</div>
+                            <div class="contact_inputs_wrap">
+                                <label for="" class="contact_label">
+                                    Имя
+                                    <input type="text" class="contact_input input_letters_name" placeholder="Александр">
+                                    <p class="error_mail_lat" style="display:none"></p>
+                                </label>
+                                <label for="" class="contact_label">
+                                    Фамилия
+                                    <input type="text" class="contact_input input_letters_fam" placeholder="Пушкин"
+                                    >
+                                    <p class="error_mail_lat" style="display:none">Недопустимые символы. Это поле может содержать только латиницу</p>
+                                </label>
+                                <label for="" class="contact_label">
+                                    Эл. почта
+                                    <input type="text" class="contact_input input_mail" placeholder="mail@mail.ru">
+                                    <p class="error_mail_lat" style="display:none">Недопустимые символы. Это поле может содержать только латиницу</p>
+                                </label>
+                                <label for="" class="contact_label contact_input_last">
+                                    Номер телефона
+                                    <!-- <input type="text" class="contact_input input_phone" placeholder="999 432 34-21"> -->
+                                    <input class="contact_input input_phone" type="tel" name="phone" placeholder="999 432 34-21" pattern="^\+\d{2}\(\d{3}\)\s\d{3}[-]\d{2}[-]\d{2}$">
+                                    <p class="error_mail_lat" style="display:none">Недопустимые символы. Это поле может содержать только латиницу</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="delivery">
+                            <div class="content_subtitle">
+                                Адрес и способ доставки
+                            </div>
+                            <div class="contact_inputs_wrap delivery_inputs_wrap d-flex">
+                                <label for="" class="contact_label">
+                                    Страна
+                                    <select name="select"> 
+                                        <option value="russia" selected>Россия</option>
+                                        <option value="ukraine" >Украина</option>
+                                        <option value="belarus">Беларусь</option>
+                                      </select>
+                                </label>
+                                <label for="" class="contact_label">
+                                    Город
+                                    <input type="text" class="contact_input"
+                                    >
+                                </label>
+                            </div>
+                            <div class="delivery_ways_wrap">
+                                <div class="delivery_ways_title">
+                                    Способ доставки
+                                </div>
+                                <div class="delivery_ways_items">
+                                    <div class="form_radio">
+                                        <input id="carrier" type="radio" name="radio" value="710" checked>
+                                        <label class="delivery_label" for="carrier">Доставка курьерской службой — 710 ₽
+                                            <p class="label_extra">(Срок доставки — 1-3 дня)</p>
+                                        </label>
+                                    </div>
+                                     
+                                    <div class="form_radio">
+                                        <input id="trans" type="radio" name="radio" value="210">
+                                        <label class="delivery_label" for="trans">Доставка транспортной компанией — 210 ₽
+                                            <p class="label_extra">(Данный вид доставки возможен при полной предоплате заказаю Срок доставки — 3-5 дней)</p>
+                                        </label>
+                                    </div>
+                                     
+                                    <div class="form_radio">
+                                        <input id="self" type="radio" name="radio" value="180">
+                                        <label class="delivery_label" for="self">Самовывоз — 180 ₽
+                                            <p class="label_extra">Доставка до пункта самовывоза займет 2-3 дня</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="self_delivery_wrap" style="display:none;">
+                                <div class="delivery_ways_title">
+                                    Пункт самовывоза
+                                </div>
+                                <div class="contact_inputs_wrap delivery_inputs_wrap">
+                                    <label for="" class="contact_label">
+                                        Станция метро
+                                        <select class="select_self" name="select"> 
+                                            <option value="bridge" selected>Кузнецкий мост</option>
+                                            <option value="theater" >Театральная</option>
+                                            <option value="lenin">Библиотека Ленина</option>
+                                          </select>
+                                    </label>
+                                </div>
+                                <div class="map_wrap">
+                                    <div id="map"></div>
+                                    <div class="map_address">Ул. Кузнецкий мост, 9/10 стр.2, офис 204<br>Ежедневно с 12:00 до 22:00</div>
+                                </div>
+                            </div>
+                            <div class="comments_wrap">
+                                <div class="content_subtitle">
+                                    Комментарий к заказу
+                                </div>
+                                <textarea name="comment" id="" cols="30" rows="10" class="comment_text"></textarea>
+                                <a href="" class="comments_btn">К выбору способа оплаты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_wrap_right order-lg-2 order-1 mb-5 mb-lg-0">
+                        <div class="content_wrap_right_title">
+                            Ваш заказ
+                        </div>
+                        <div class="orders_positions">
+                            <div class="orders_item">
+                                <p class="orders_name">Мельница ручная Kornkraft Mia aMola</p>
+                                <p class="orders_price">18 990 ₽</p>
+                            </div>
+                            <div class="orders_item">
+                                <p class="orders_name">Пшеница БИО, 1 кг (Россия) (2 шт)</p>
+                                <p class="orders_price">420 ₽</p>
+                            </div>
+                        </div>
+                        <div class="sales_wrap">
+                            <p class="sales_name">Размер скидки (5%)</p>
+                            <p class="sales_price">420 ₽</p>
+                        </div>
+                        <div class="sales_wrap">
+                            <p class="sales_name">Итого</p>
+                            <p class="sales_price">18 344 ₽</p>
+                        </div>
+                        <div class="sales_wrap">
+                            <p class="sales_name sales_name_last">Доставка курьерской службой</p>
+                            <p class="sales_price sales_price_last">710 ₽</p>
+                        </div>
+                        <div class="sum_wrap">
+                            <p class="sum_text">Сумма с доставкой</p>
+                            <p class="sum_price">19 054 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="footer_title">Каталог</div>
+                    <div class="footer_menu_wrap">
+                        <a href="" class="footer_item">Мельница</a>
+                        <a href="" class="footer_item">Проращиватели</a>
+                        <a href="" class="footer_item">Техника</a>
+                        <a href="" class="footer_item">Детям</a>
+                        <a href="" class="footer_item">Для выпечки</a>
+                        <a href="" class="footer_item">Чай из Непала</a>
+                        <a href="" class="footer_item">Посуда</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="footer_title">Информация</div>
+                    <a href="" class="footer_item">Доставка и самовывоз</a>
+                    <a href="" class="footer_item">О магазине</a>
+                    <a href="" class="footer_item">10 причин покупать у нас</a>
+                    <a href="" class="footer_item">Оплата</a>
+                    <a href="" class="footer_item">Мастер-классы</a>
+                    <a href="" class="footer_item">Блог</a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="footer_title">Контакты</div>
+                    <p class="footer_list">+7 (495) 789 41 43 — Москва</p>
+                    <p class="footer_list">+7 (812) 385 55 86 — Санкт-Петербург</p>
+                    <p class="footer_list">+7 (800) 555 33 86 — вся Россия</p>
+                    <a href="" class="footer_list">Обратная связь</a>
+                    <a href="mailto:info@hlebomoli.ru" class="footer_list">info@hlebomoli.ru</a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="footer_title">Вступайте в клуб</div>
+                    <p class="footer_list">
+                        Подпишитесь на наши новости и будьте в курсе всех акций, скидок и новых поступлений, а также самых изысканных рецептов.
+                    </p>
+                    <div class="sudscribe_wrap">
+                        <input type="text" class="sudscribe_mail" placeholder="Ваша эл. почта">
+                        <a href="" class="subscribe_btn"><img src="img/subscr_arrow.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="footer_line"></div>
+                </div>
+                <div class="col-12">
+                    <div class="footer_bot d-flex flex-column flex-md-row justify-content-center justify-content-md-between">
+                        <p class="copyright mb-2 mb-md-0">Хлебомолы © 2014–2015</p>
+                        <div class="socials_wrap">
+                            <a href="" class="socials_link">
+                                <img src="img/vk.png" alt="" class="socials_img">
+                            </a>
+                            <a href="" class="socials_link">
+                                <img src="img/facebook.png" alt="" class="socials_img">
+                            </a>
+                            <a href="" class="socials_link">
+                                <img src="img/insta.png" alt="" class="socials_img">
+                            </a>
+                            <a href="" class="socials_link">
+                                <img src="img/tube.png" alt="" class="socials_img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

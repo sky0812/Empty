@@ -1,0 +1,665 @@
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* fonts */
+@font-face { 
+    font-family: "Calibri";
+    src: local("Calibri"),
+         url(../Fonts/Calibri/Calibri\ Regular.ttf) format("truetype");
+}
+
+@font-face { 
+    font-family: "Calibri Bold";
+    src: local("Calibri Bold"),
+         url(../Fonts/Calibri/Calibri\ Bold.TTF) format("truetype");
+    font-weight: bold;
+}
+
+@font-face { 
+    font-family: "Georgia";
+    src: local("Georgia"),
+         url(../Fonts/Georgia/Georgia.ttf) format("truetype");
+}
+
+@font-face { 
+    font-family: "Georgia Bold";
+    src: local("Georgia Bold"),
+         url(../Fonts/Georgia/georgia\ bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+@font-face { 
+    font-family: "Georgia Italic";
+    src: local("Georgia Italic"),
+         url(../Fonts/Georgia/georgia\ italic.ttf) format("truetype");
+    font-style: italic;
+}
+
+@font-face { 
+    font-family: "Georgia Bold Italic";
+    src: local("Georgia Bold Italic"),
+         url(../Fonts/Georgia/georgia\ bold\ italic.ttf) format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+  background: url(../img/bacground.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  font-family: "Calibri", sans-serif;
+  background-size: 100% 477px;
+  color: #461f02;
+}
+
+li.header_top_item a {
+  font-size: 13px;
+  color: #766259;
+  border-bottom: 1px solid rgba(0,0,0,0.4); 
+  height: 16px;
+}
+
+li.header_top_item:not(:first-child) a {
+  margin-left:34px;
+}
+
+p.header_top_wrap_text {
+  font-size: 13px;
+  color: #766259;
+  margin-right: 5px;
+}
+
+a.header_top_wrap_link {
+  font-size: 13px;
+  color: #766259;
+  border-bottom: 1px dotted rgba(0,0,0,0.4); 
+  height: 16px; 
+  white-space: nowrap;
+  width: fit-content;
+}
+
+img.header_top_wrap_img {
+  margin-right: 7px;
+}
+
+.header_top_wrap_city:not(:last-child) {
+  margin-right: 35px;
+}
+
+.header_top.d-flex.justify-content-between {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(96,58,26,0.14901960784313725);
+}
+
+.header_mid.d-flex {
+  padding: 15px 0 22px;
+  border-bottom: 1px solid rgba(96,58,26,0.14901960784313725);
+}
+
+p.phone_warp_text {
+  font-size: 28px;
+  font-style: italic;
+  font-family: "Georgia";
+}
+
+.phone_wrap { 
+  align-items: flex-end;
+}
+
+a.phone_wrap_link.header_top_wrap_link {
+  border-bottom: 1px solid rgba(145,109,93,0.4);
+}
+
+input.search {
+  width: 330px;
+  height: 36px;
+  border-radius: 18px;
+  border: none;
+  padding-left: 33px;
+  font-size: 13px;
+  color: #766259;
+}
+
+.search_label {
+  position: relative;
+}
+
+.search_label:after {
+  content: url(../img/icon_searsh.png);
+  position: absolute;
+  display: block;
+  left: 11px;
+  top: 9px;
+}
+
+li.main_menu_item a {
+  font-size: 15px;
+  color: #593518;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+img.cart_img {
+  margin-right: 5px;
+}
+
+p.cart_text {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+ul.main_menu.d-flex {
+  margin-top: 8px;
+}
+
+.header_bot {
+  padding: 8px 0 20px;
+}
+
+.content {
+  background: url(../img/top_rib.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 45px;
+}
+
+li.main_menu_item:not(:first-child) {
+  margin-left: 38px;
+}
+
+.content_title {
+  font-size: 35px;
+  font-style: italic;
+  font-family: "Georgia Italic";
+  margin-bottom: 35px;
+}
+
+input.contact_input {
+  height: 35px;
+  border-radius: 2px;
+  border: 1px solid #c4b7b1;
+  margin-left: -10px;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 35px;
+  color: #461f02;
+  font-family: "Calibri";
+  background: #fff;
+}
+select {
+  height: 35px;
+  border-radius: 2px;
+  border: 1px solid #c4b7b1;
+  margin-left: -10px;
+  padding-left: 10px;
+  font-size: 16px!important;
+  line-height: 35px;
+  color: #461f02!important;
+  font-family: "Calibri";
+  background: #fff;
+}
+
+input.contact_input::placeholder {
+  color: #81706879;
+}
+
+.contact_input_last {
+  position: relative;
+}
+
+.contact_input_last:after {
+  content: '+7';
+  height: 34px;
+  width: 40px;
+  border: 1px solid #c4b7b1;
+  position: absolute;
+  left: 0;
+  top: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #817068;
+}
+
+.contact_input_last > input {
+  padding-left: 50px;
+  width: 159px;
+}
+
+label.contact_label {
+  font-size: 14px;
+  color: #817068;
+  display: flex;
+  flex-direction: column;
+  width: 185px; 
+  padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.contact_inputs_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+select.select_self {
+  width: 246px;
+  margin-left: -10px;
+}
+
+p.error_mail_lat {
+  font-size: 11px;
+  line-height: 12px;
+  color: #958781;
+  font-style: italic;
+  font-family: "Calibri";
+  margin-top: 5px;
+}
+
+.delivery_ways_title {
+  font-size: 19px;
+  line-height: 35px;
+  font-style: italic;
+  font-family: "Georgia";
+  margin-bottom: 13px;
+}
+
+.map_address {
+  font-size: 16px;
+  background: #fff;
+  bottom: -2px;
+  z-index: 10;
+  position: absolute;
+  width: calc(100% + 2px);
+  padding: 90px 10px 27px;
+  left: -2px; 
+  background: linear-gradient(180deg, rgba(255,255,255,0.19931722689075626) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+}
+
+.ymaps-2-1-78-map {
+  right: 1px;
+}
+
+#map {
+	max-width: 390px; 
+  height: 292px; 
+  padding: 0; 
+  margin: 0;
+  margin-top: 5px;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+#map:after {
+  content: '';
+    display: block;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 95%;
+    box-shadow: 5px 5px 5px #d15b0a38;
+}
+
+textarea.comment_text {
+  width: 100%;
+  height: 180px;
+  border: 1px solid #c4b7b1;
+  border-radius: 2px;
+}
+
+a.comments_btn {
+  font-size: 14px;
+  line-height: 35px;
+  color: #ff7700;
+  font-weight: bold;
+  width: 226px;
+  height: 46px;
+  border-radius: 2px;
+  border: 1px solid #ff6900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-top: 25px;
+  position:relative;
+}
+
+a.comments_btn:after {
+    content: url(../img/arrow.png);
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    display: block;
+    transform: scale(1.2);
+}
+
+.map_wrap {
+  position: relative;
+}
+
+.orders_item, .sales_wrap {
+	display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.content_wrap_left {
+  width: 100%;
+  max-width: 390px;
+}
+.content_wrap_right {
+	max-width: 308px;
+}
+
+
+/* Способы доставки */
+.form_radio {
+	margin-bottom: 10px;
+}
+.form_radio input[type=radio] {
+	display: none;
+}
+.form_radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+  padding: 17px 17px 17px 44px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+  font-size: 17px;
+  border-top: 1px dashed #d15a0a6b;
+  width: 100%;
+}
+
+.form_radio label:before {
+	content: "";
+	display: inline-block;
+	width: 17px;
+	height: 18px;
+	position: absolute;
+  left: 17px;
+  top: 15px;
+	background: url(../img/radio-1.png) 0 0 no-repeat;
+} 
+
+p.label_extra {
+  font-size: 13px;
+  color: #c4b7b1;
+  margin-top: 5px;
+}
+
+.form_radio input[type=radio]:checked + label:before {
+	background: url(../img/radio-2.png) 0 0 no-repeat;
+} 
+
+.form_radio label:hover:before {
+	filter: brightness(120%);
+}
+
+
+/* Лица */
+.form_radio_btn {
+	display: inline-block;
+	margin-right: 10px;
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+.form_radio_btn label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+  width: 195px;
+  height: 49px;
+}
+
+.form_radio_btn input[type=radio]:checked + label {
+  border: 1px dashed #d15b0a;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+} 
+
+.form_radio_btn:first-child input[type=radio]:checked + label {
+  border-right: 1px solid #d15b0a;
+} 
+
+.form_radio_btn:last-child input[type=radio]:checked + label {
+  border-left: 1px solid #d15b0a;
+}
+
+.face_wrap {
+  margin-bottom: 40px;
+}
+
+.content_subtitle {
+  font-size: 25px;
+  font-style: italic;
+  font-family: "Georgia";
+  margin-bottom: 20px;
+}
+
+.footer {
+  background: url(../img/footer_bacground.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100%;
+  margin-top: 75px;
+  padding-top: 40px;
+}
+
+.footer_title {
+  font-size: 17px;
+  font-style: italic;
+  font-family: "Georgia";
+  margin-bottom: 5px;
+}
+
+.footer_menu_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_menu_wrap .footer_item {
+  width: 50%;
+}
+
+.footer_item, .footer_list {
+  font-size: 14px;
+  line-height: 22px;
+  color: #766259;
+  display: block;
+}
+
+a.footer_item, a.footer_list {
+  text-decoration: underline;
+}
+
+a.subscribe_btn {
+  width: 43px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #ff6f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -5px;
+}
+
+input.sudscribe_mail {
+  width: 186px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: 1px solid #c4b7b1;
+  padding-left: 15px;
+}
+
+.sudscribe_wrap {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer_line {
+  margin-top: 60px;
+  margin-bottom: 15px;
+  background: url(../img/footer_line.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 10px;
+}
+
+.footer_bot {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p.copyright {
+  font-size: 13px;
+  color: #766259;
+}
+
+.socials_wrap {
+  display: flex;
+}
+
+a.socials_link:not(:first-child) {
+  margin-left: 5px;
+}
+
+.content_wrap_right {
+  width: 308px;
+  border: 1px solid #f0e4ca;
+  height: fit-content;
+  padding: 20px 15px;
+  position: relative;
+}
+
+.content_wrap_right:after {
+  content: '';
+    display: block;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 95%;
+    box-shadow: 5px 5px 5px #d15b0a38;
+}
+
+.content_wrap_right_title {
+  font-size: 25px;
+  font-style: italic;
+  font-family: "Georgia";
+  margin-bottom: 20px;
+}
+
+p.orders_name, p.sales_name {
+  font-size: 14px;
+  line-height: 17px;
+  color: #766259;
+  max-width: 170px;
+}
+
+p.orders_price, p.sales_price {
+  font-size: 14px;
+}
+
+.orders_positions {
+  margin-bottom: 40px;
+}
+
+.sum_wrap {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p.sum_text {
+  font-size: 14px;
+}
+
+p.sum_price {
+  font-size: 20px;
+  font-weight: bold;
+}
