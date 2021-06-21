@@ -1,0 +1,33 @@
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 992px;
+  }
+
+  .app_planets_group__item {
+	    width: 47%;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 767px;
+  }
+
+  .app_filters {
+	    flex-direction: column;
+	    align-items: center;
+	}
+
+	.app_filters select {
+	    margin: 0 20px 20px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  .app_planets_group__item {
+    width: 90%;
+}
+}

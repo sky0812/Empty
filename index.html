@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Planets list</title>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div id="app">
+                <h1 class="app_title">Planets list:</h1>
+                <div class="app_wrapper" :class="loading ? 'loading' : 'loaded'">
+                    <div class="app_filters box">
+                        <select @change="updateFilter(filter.id, $event.target.value)" v-for="(filter, index) in filters" :id="filter.id" :key="filter.id">
+                            <option value="">{{ filter.label }}</option>
+                            <option v-for="(option, index) in filter.options" :value="option">{{ option }}</option>
+                        </select>
+                        <select @change="updateSorting($event.target.value)" id="sorting">
+                            <option value="">Sort</option>
+                            <option value="name">Sort by Name</option>
+                        </select>
+                    </div>
+
+                        <div v-if="loading" class="app_loader">Loading planets... Please, wait</div>
+
+                        <div v-else-if="paginatedPlanets.length" class="app_planets_group">
+                            <div v-for="(planet, index) in paginatedPlanets" class="app_planets_group__item planet" :key="index">
+                                <h2 class="planet_title">{{ planet.name }}</h2>
+                                <ul class="planet_props">
+                                    <li class="planet_props_item">Rotation period: {{ planet.rotation_period }}</li>
+                                    <li class="planet_props_item">Climate: {{ planet.climate }}</li>
+                                    <li class="planet_props_item">Gravity: {{ planet.gravity }}</li>
+                                    <li class="planet_props_item" v-text="$options.filters.formatTime(planet.created)"></li>
+                                </ul> 
+                                <div class="app_planets_group__item_link_wrap">
+                                    <a :href="planet.url" class="app_planets_group__item_link" target="_blank">Read More</a>                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    <div v-else class="app_empty">
+                        <p>Nothing found...</p>
+                    </div>
+
+                    
+                    
+                    <div class="app_pagination" v-if="maxNumPages > 1">
+                        <div class="app_pagination_item" :class="num === paged ? 'active' : ''" v-for="num in maxNumPages">
+                            <button @click="setPage(num)" type="button" :aria-label="'go to ' + num + ' page'">{{ num }}</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
