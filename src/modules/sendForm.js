@@ -2,17 +2,36 @@ const sendForm = () => {
     const errorMessage = 'Что то пошло не так!';
     const loadMessage = 'Загрузка... ';
     const successMessage = 'Спасибо! Мы скоро с Вами свяжемся!';
+    const tooShortMessage = 'Должно быть 12 знаков';
     const inputName = document.getElementsByName('fio')[0];
     const inputTel = document.getElementsByName('tel')[0];
     const form = document.getElementsByName('form-callback')[0];
     const callback = document.getElementById('callback');
     const modalOverlay = document.querySelector('.modal-overlay');
+    const submitBtn = document.querySelector('.submit_btn');
 
     const statusMessage = document.createElement('div');
     statusMessage.style.cssText = 'font-size: 2rem;';
 
+    // inputTel.addEventListener('focusout', () => {
+    //     if(inputTel.value.length === 12) {
+    //         submitBtn.setAttribute('disabled', false);
+    //     } else {
+    //         submitBtn.setAttribute('disabled', true);    
+    //         alert(tooShortMessage);
+    //     }
+    // });
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+ 
+        if(inputTel.value.length === 12) {
+            
+        } else {
+            alert(tooShortMessage);
+            return
+        }  
+
         form.appendChild(statusMessage);
         statusMessage.style.cssText = 'color: #000000;';
 
